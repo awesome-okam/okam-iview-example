@@ -16,70 +16,8 @@ okam-iview-example
 
 [ivew example](https://github.com/TalkingData/iview-weapp/tree/master/examples)
 
-
-## 存在问题 （百度小程序中使用 iview 存在的问题）
-
-- 引入了 `node_modules` 路径得组件 会导致出错，更换 路径名是 ok 的
-
-    已解决： 将 `node_modules` 替换成 `npm`
-
-- 用到的 `getRelationNodes` 即：behaviors、组件间关系、抽象节点 百度自定义组件不支持 等
-- `relations` 不支持
-
-- 自定义组件样式不生效 同名的组件 有的加前缀 有的不加前缀，导致组件样式渲染失败
-
-    已解决：百度小程序已修复
-
-- 字体渲染： 字体 ios 真机正常 、android 不正常
-
-- event detail  微信与小程序不一致
-已解决：框架已做兼容处理
-
-- 里面用 `data` 上用了 `...` 了 必须 `babel7` 转
-
-- `wxs` 语法不一致未做处理
-<!-- 影响: wxs -->
-    - [wx: wxs](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/)
-    - [swan: filter](https://smartprogram.baidu.com/docs/develop/framework/view_filter/)
-
-## 组件可用情况
-* action-sheet [ok]
-* alert [ok]
-* avatar [ok]
-* badge [ok]
-* button [ok]
-* card [ok]
-* checkbox [getRelationNodes]
-* collapse [icon]
-* color [ok]
-* count-down [ok]
-* divider [wxs ==== ok, rpx 手动微调处理]
-* drawer [ok]
-* grid [getRelationNodes]
-* icon [icon]
-* index [wxs === 侧边标签不显示]
-* input [样式存在一点问题] [height, min-height， 混用渲染机制不一致]
-* inputNumber [ok]
-* layout [ok]
-* list [开发工具报错]
-* load-more [ok]
-* message [ok]
-* modal [getRelationNodes, 样式不一致]
-* notice-bar [getRelationNodes icon]
-* page [样式 + icon]
-* panel [ok]
-* progress [ok]
-* radio [getRelationNodes]
-* rate [开发工具报错]
-* spin [样式存在一点问题 + 开发工具报错]
-* steps [wxs + getRelationNodes]
-* sticky [getRelationNodes]
-* swipeout [wxs + icon === 报错]
-* switch [开发工具报错]
-* tab-bar [getRelationNodes]
-* tabs [getRelationNodes]
-* tag [wxs ==== ok]
-* toast [ok]
+## 效果
+![home](./docs/demo.png)
 
 ## 快速开始
 
@@ -162,6 +100,70 @@ okam-iview-example
         ├── ...
         └── ...
 ```
+
+## 存在问题 （百度小程序中使用 iview 存在的问题）
+
+- 引入了 `node_modules` 路径得组件 会导致出错，更换 路径名是 ok 的
+
+    已解决： 将 `node_modules` 替换成 `npm`
+
+- 用到的 `getRelationNodes` 即：behaviors、组件间关系、抽象节点 百度自定义组件不支持 等
+- `relations` 不支持
+
+- 自定义组件样式不生效 同名的组件 有的加前缀 有的不加前缀，导致组件样式渲染失败
+
+    已解决：百度小程序已修复
+
+- 字体渲染： 字体 ios 真机正常 、android 不正常
+
+- event detail  微信与小程序不一致
+已解决：框架已做兼容处理
+
+- 里面用 `data` 上用了 `...` 了 必须 `babel7` 转
+
+- `wxs` 语法不一致未做处理
+<!-- 影响: wxs -->
+    - [wx: wxs](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/)
+    - [swan: filter](https://smartprogram.baidu.com/docs/develop/framework/view_filter/)
+
+## 组件可用情况
+* action-sheet [ok]
+* alert [ok]
+* avatar [ok]
+* badge [ok]
+* button [ok]
+* card [ok]
+* checkbox [getRelationNodes]
+* collapse [icon]
+* color [ok]
+* count-down [ok]
+* divider [wxs ==== ok, rpx 手动微调处理]
+* drawer [ok]
+* grid [getRelationNodes]
+* icon [icon]
+* index [wxs === 侧边标签不显示]
+* input [样式存在一点问题] [height, min-height， 混用渲染机制不一致]
+* inputNumber [ok]
+* layout [ok]
+* list [开发工具报错]
+* load-more [ok]
+* message [ok]
+* modal [getRelationNodes, 样式不一致]
+* notice-bar [getRelationNodes icon]
+* page [样式 + icon]
+* panel [ok]
+* progress [ok]
+* radio [getRelationNodes]
+* rate [开发工具报错]
+* spin [样式存在一点问题 + 开发工具报错]
+* steps [wxs + getRelationNodes]
+* sticky [getRelationNodes]
+* swipeout [wxs + icon === 报错]
+* switch [开发工具报错]
+* tab-bar [getRelationNodes]
+* tabs [getRelationNodes]
+* tag [wxs ==== ok]
+* toast [ok]
 
 ### 代码规范说明
 fecs: https://github.com/ecomfe/fecs

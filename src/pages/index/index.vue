@@ -1,75 +1,80 @@
 <template>
     <view class="comp-page">
-        <view class="title">iView Weapp</view>
-        <i-button @click="handleClick">默认按钮</i-button>
-        <i-button @click="handleClick" type="error" long="true">联通两边按钮</i-button>
-        <i-row>
-            <i-col span="8" i-class="col-class">col-8</i-col>
-            <i-col span="8" i-class="col-class">col-8</i-col>
-            <i-col span="8" i-class="col-class">col-8</i-col>
-        </i-row>
-
-        <i-grid>
-            <i-grid-item>
-                <i-grid-icon>
-                    <image src="https://file.iviewui.com/icon/iview.png" />
-                </i-grid-icon>
-                <i-grid-label>Grid</i-grid-label>
-            </i-grid-item>
-            <i-grid-item>Grid</i-grid-item>
-            <i-grid-item>Grid</i-grid-item>
-        </i-grid>
-
-        <i-panel title="标题">
-            <view style="padding: 15px;">PANEL 内容区域</view>
+        <view class="logo">
+            <!-- <image src="../images/logo.png" mode="aspectFit"></image> -->
+        </view>
+        <i-panel title="布局">
+            <i-cell-group>
+                <i-cell title="Layout 栅格布局" is-link url="/pages/layout/index"></i-cell>
+                <i-cell title="Grid 宫格" is-link url="/pages/grid/index"></i-cell>
+                <i-cell title="Panel 面板" is-link url="/pages/panel/index"></i-cell>
+                <i-cell title="List 列表" is-link url="/pages/list/index"></i-cell>
+                <i-cell title="Card 卡片" is-link url="/pages/card/index"></i-cell>
+            </i-cell-group>
         </i-panel>
-
-        <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-            <view slot="content">内容不错</view>
-            <view slot="footer">尾部内容</view>
-        </i-card>
-
-        <i-icon type="activity" size="28" color="#80848f" />
-
-        <i-tabs :current="current" @change="handleChange">
-            <i-tab key="tab1" title="选项1"></i-tab>
-            <i-tab key="tab2" title="选项2"></i-tab>
-            <i-tab key="tab3" title="选项3"></i-tab>
-        </i-tabs>
-
-        <i-panel title="基础用法">
-            <view style="padding: 16px">
-                <i-input-number :value="value1" min="0" max="100" @change="handleChange1" />
-            </view>
+        <i-panel title="基础组件">
+            <i-cell-group>
+                <i-cell title="Button 按钮" is-link url="/pages/button/index"></i-cell>
+                <i-cell title="Color 色彩" is-link url="/pages/color/index"></i-cell>
+                <i-cell title="Icon 图标" is-link url="/pages/icon/index"></i-cell>
+            </i-cell-group>
         </i-panel>
+        <i-panel title="导航">
+            <i-cell-group>
+                <i-cell title="TabBar 标签栏" is-link url="/pages/tab-bar/index"></i-cell>
+                <i-cell title="Tabs 标签页" is-link url="/pages/tabs/index"></i-cell>
+                <i-cell title="Drawer 抽屉" is-link url="/pages/drawer/index"></i-cell>
+                <i-cell title="Page 分页" is-link url="/pages/page/index"></i-cell>
+                <i-cell title="Steps 步骤条" is-link url="/pages/steps/index"></i-cell>
+                <i-cell title="NoticeBar 通告栏" is-link url="/pages/notice-bar/index"></i-cell>
+                <i-cell title="Index 索引选择器" is-link url="/pages/index-list/index"></i-cell>
+                <i-cell title="Sticky 吸顶容器" is-link url="/pages/sticky/index"></i-cell>
+            </i-cell-group>
+        </i-panel>
+        <i-panel title="操作反馈">
+            <i-cell-group>
+                <i-cell title="ActionSheet 动作面板" is-link url="/pages/action-sheet/index"></i-cell>
+                <i-cell title="Toast 轻提示" is-link url="/pages/toast/index"></i-cell>
+                <i-cell title="Modal 对话框" is-link url="/pages/modal/index"></i-cell>
+                <i-cell title="Message 全局提醒" is-link url="/pages/message/index"></i-cell>
+                <i-cell title="Spin 加载中" is-link url="/pages/spin/index"></i-cell>
+                <i-cell title="Swipeout 滑动菜单" is-link url="/pages/swipeout/index"></i-cell>
+            </i-cell-group>
+        </i-panel>
+        <i-panel title="视图">
+            <i-cell-group>
+                <i-cell title="Badge 徽章" is-link url="/pages/badge/index"></i-cell>
+                <i-cell title="Alert 警告提示" is-link url="/pages/alert/index"></i-cell>
+                <i-cell title="Tag 标签" is-link url="/pages/tag/index"></i-cell>
+                <i-cell title="Progress 进度条" is-link url="/pages/progress/index"></i-cell>
+                <i-cell title="Avatar 头像" is-link url="/pages/avatar/index"></i-cell>
+                <i-cell title="CountDown 倒计时" is-link url="/pages/count-down/index"></i-cell>
+                <i-cell title="Divider 分隔符" is-link url="/pages/divider/index"></i-cell>
+                <i-cell title="Collapse 折叠面板" is-link url="/pages/collapse/index"></i-cell>
+                <i-cell title="LoadMore 页底提示" is-link url="/pages/load-more/index"></i-cell>
+            </i-cell-group>
+        </i-panel>
+        <i-panel title="表单">
+            <i-cell-group>
+                <i-cell title="Input 输入框" is-link url="/pages/input/index"></i-cell>
+                <i-cell title="Radio 单选" is-link url="/pages/radio/index"></i-cell>
+                <i-cell title="Checkbox 复选" is-link url="/pages/checkbox/index"></i-cell>
+                <i-cell title="Switch 开关" is-link url="/pages/switch/index"></i-cell>
+                <i-cell title="Rate 评分" is-link url="/pages/rate/index"></i-cell>
+                <i-cell title="InputNumber 数字输入框" is-link url="/pages/input-number/index"></i-cell>
+            </i-cell-group>
+        </i-panel>
+        <view style="margin-top: 16px">
+            <ad unit-id="adunit-afe5e164cf94a7aa"></ad>
+        </view>
     </view>
 </template>
 
 <script>
 
-
-import IButton from 'iview-weapp/dist/button';
-import IRow from 'iview-weapp/dist/row';
-import ICol from 'iview-weapp/dist/col';
-
-import IGrid from 'iview-weapp/dist/grid';
-import IGridItem from 'iview-weapp/dist/grid-item';
-import IGridIcon from 'iview-weapp/dist/grid-icon';
-import IGridLabel from 'iview-weapp/dist/grid-label';
-
-
-import IPanel from 'iview-weapp/dist/panel';
-
-import ICard from 'iview-weapp/dist/card';
-
-import IIcon from 'iview-weapp/dist/icon';
-
-
-import ITabs from 'iview-weapp/dist/tabs';
-import ITab from 'iview-weapp/dist/tab';
-
-
-import IInputNumber from 'iview-weapp/dist/input-number';
+import IPanel from 'iview-weapp/dist/panel/index';
+import ICell from 'iview-weapp/dist/cell/index';
+import ICellGroup from 'iview-weapp/dist/cell-group/index';
 
 export default {
     config: {
@@ -77,59 +82,19 @@ export default {
     },
 
     components: {
-        ITabs,
-        ITab,
-        IIcon,
-        ICard,
-        IGrid,
-        IGridItem,
-        IGridIcon,
-        IGridLabel,
-        IInputNumber,
         IPanel,
-        IButton,
-        IRow,
-        ICol
+        ICell,
+        ICellGroup
     },
 
     data: {
-        value1: 1,
-        value2: 0.1,
-        current: 'tab1',
-        current_scroll: 'tab1',
-        testData: true
     },
 
     methods: {
-        handleClick() {
-            console.log(1);
-        },
-        handleChange({detail}) {
-            this.current = detail.key;
-        },
 
-        handleChangeScroll({detail}) {
-            this.current_scroll = detail.key;
-        },
-
-        handleChange1({detail}) {
-            this.value1 = detail.value;
-        },
-
-        handleChange2({detail}) {
-            this.value2 = detail.value;
-        }
     }
 };
 </script>
 
-<style lang="css">
-.title {
-    display: block;
-    width: 100%;
-    color: #f00;
-    font-size: 20px;
-    text-align: center;
-}
-
+<style lang="stylus">
 </style>

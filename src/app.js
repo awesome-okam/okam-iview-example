@@ -1,6 +1,6 @@
 /**
  * @file The app entrance
- * @author xxx@baidu.com
+ * @author xxx
  */
 
 'use strict';
@@ -8,7 +8,6 @@
 export default {
     config: {
         pages: [
-            'pages/index/home',
             'pages/index/index',
             'pages/icon/index',
             'pages/color/index',

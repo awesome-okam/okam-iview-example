@@ -12,14 +12,11 @@ okam-iview-example
 
 - [iview](https://weapp.iviewui.com/docs/guide/start)
 
-## pages 中的 示例来自 iview/example
-
-[ivew example](https://github.com/TalkingData/iview-weapp/tree/master/examples)
-
-## 效果
-![home](./docs/demo.png)
-
 ## 快速开始
+
+pages 中的 示例来自 [ivew example](https://github.com/TalkingData/iview-weapp/tree/master/examples)
+
+![home](./docs/demo.png =200x400)
 
 ### 准备工作
 
@@ -102,68 +99,59 @@ okam-iview-example
 ```
 
 ## 存在问题 （百度小程序中使用 iview 存在的问题）
-
-- 引入了 `node_modules` 路径得组件 会导致出错，更换 路径名是 ok 的
-
-    已解决： 将 `node_modules` 替换成 `npm`
-
-- 用到的 `getRelationNodes` 即：behaviors、组件间关系、抽象节点 百度自定义组件不支持 等
-- `relations` 不支持
-
-- 自定义组件样式不生效 同名的组件 有的加前缀 有的不加前缀，导致组件样式渲染失败
-
-    已解决：百度小程序已修复
-
-- 字体渲染： 字体 ios 真机正常 、android 不正常
-
-- event detail  微信与小程序不一致
-已解决：框架已做兼容处理
-
-- 里面用 `data` 上用了 `...` 了 必须 `babel7` 转
-
-- `wxs` 语法不一致未做处理
-<!-- 影响: wxs -->
-    - [wx: wxs](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/)
-    - [swan: filter](https://smartprogram.baidu.com/docs/develop/framework/view_filter/)
+* [x] `node_modules` 路径问题
+* [x] `event detail` 高低版本不一致问题
+* [x] 里面用 `data` 上用了 `...` 了 必须 `babel7` 转
+* [ ] `wxs` 语法不一致未做处理
+    * [wx: wxs](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/)
+    * [swan: filter](https://smartprogram.baidu.com/docs/develop/framework/view_filter/)
+* [ ] `getRelationNodes、relations` 不支持
+* [ ] 字体渲染： 字体 `ios` 真机正常 、`android` 不正常
 
 ## 组件可用情况
-* action-sheet [ok]
-* alert [ok]
-* avatar [ok]
-* badge [ok]
-* button [ok]
-* card [ok]
-* checkbox [getRelationNodes]
-* collapse [icon]
-* color [ok]
-* count-down [ok]
-* divider [wxs ==== ok, 1rpx 手动微调处理]
-* drawer [ok]
-* grid [getRelationNodes]
-* icon [icon]
-* index [wxs + 侧边标签不显示]
-* input [样式] [height, min-height，混用渲染机制不一致]
-* inputNumber [ok]
-* layout [ok]
-* list [开发工具]
-* load-more [ok]
-* message [ok]
-* modal [getRelationNodes, 样式不一致]
-* notice-bar [getRelationNodes icon]
-* page [样式 + icon]
-* panel [ok]
-* progress [ok]
-* radio [getRelationNodes]
-* rate [开发工具]
-* spin [样式 + 开发工具]
-* steps [wxs + getRelationNodes]
-* sticky [getRelationNodes]
-* swipeout [wxs + icon === 开发工具]
-* switch [开发工具]
-* tab-bar [getRelationNodes]
-* tabs [getRelationNodes]
-* tag [wxs ==== ok]
-* toast [ok]
+* 布局
+    * [x] Layout 栅格布局
+    * [ ] Grid 宫格 (getRelationNodes)
+    * [x] Panel 面板
+    * [ ] List 列表 (开发工具)
+    * [x] Card 卡片
+* 基础组件
+    * [x] Button 按钮
+    * [x] Color 色彩
+    * [ ] Icon 图标 (icon)
+* 导航
+    * [ ] TabBar 标签栏 (getRelationNodes)
+    * [ ] Tabs 标签页 (getRelationNodes)
+    * [x] Drawer 抽屉
+    * [ ] Page 分页 (细节样式 + icon)
+    * [x] Steps 步骤条 (wxs + getRelationNodes)
+    * [ ] NoticeBar 通告栏 (getRelationNodes + icon)
+    * [ ] Index 索引选择器 (wxs + 侧边标签不显示)
+    * [ ] Sticky 吸顶容器 (getRelationNodes)
+* 操作反馈
+    * ActionSheet 动作面板
+    * [x] Toast 轻提示
+    * [ ] Modal 对话框 (getRelationNodes, 样式不一致)
+    * [x] Message 全局提醒
+    * [ ] Spin 加载中 (样式 + 开发工具)
+    * [ ] Swipeout 滑动菜单 (wxs + icon)
+* 视图
+    * [x] Badge 徽章
+    * [x] Alert 警告提示
+    * [ ] Tag 标签 (wxs === ok)
+    * [x] Progress 进度条
+    * [x] Avatar 头像
+    * [x] CountDown 倒计时
+    * [x] Divider 分隔符 (wxs === ok)
+    * [ ] Collapse 折叠面板 (icon)
+    * [x] LoadMore 页底提示
+* 表单
+    * [x] Input 输入框 (细节样式，height, min-height，混用渲染机制不一致)
+    * [ ] Radio 单选 (getRelationNodes)
+    * [ ] Checkbox 复选 (getRelationNodes)
+    * [ ] Switch 开关  (开发工具)
+    * [ ] Rate 评分 (开发工具)
+    * [x] InputNumber 数字输入框
 
 ### 代码规范说明
 fecs: https://github.com/ecomfe/fecs

@@ -16,7 +16,7 @@ okam-iview-example
 
 pages 中的 示例来自 [ivew example](https://github.com/TalkingData/iview-weapp/tree/master/examples)
 
-![home](./docs/demo.png =200x400)
+![home](./docs/demo.png=200x400)
 
 ### 准备工作
 

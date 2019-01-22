@@ -1,0 +1,59 @@
+<template>
+    <view class="comp-page">
+        <i-panel title="通告栏">
+            <i-notice-bar>
+                2018年世界杯,将于6月14日至7月15日举行
+            </i-notice-bar>
+        </i-panel>
+        <i-panel title="自定义颜色 通告栏">
+            <i-notice-bar backgroundcolor="#99cc66" color="#ffff66">
+                2018年世界杯,将于6月14日至7月15日举行
+            </i-notice-bar>
+        </i-panel>
+        <i-panel title="icon 通告栏">
+            <i-notice-bar icon="systemprompt">
+                2018年世界杯,将于6月14日至7月15日举行
+            </i-notice-bar>
+        </i-panel>
+        <i-panel title="关闭 通告栏">
+            <i-notice-bar icon="systemprompt" closable>
+                2018年世界杯,将于6月14日至7月15日举行
+            </i-notice-bar>
+        </i-panel>
+        <i-panel title="滚动 通告栏">
+            <i-notice-bar icon="systemprompt" loop>
+                2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
+            </i-notice-bar>
+            <i-notice-bar icon="systemprompt" loop speed="200">
+                2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
+            </i-notice-bar>
+        </i-panel>
+    </view>
+</template>
+
+<script>
+
+import INoticeBar from 'iview-weapp/dist/notice-bar/index';
+import IPanel from 'iview-weapp/dist/panel/index';
+
+export default {
+    config: {
+        title: 'NoticeBar 通告栏'
+    },
+
+    components: {
+        INoticeBar,
+        IPanel
+    },
+
+    data: {
+    },
+
+    methods: {
+
+    }
+};
+</script>
+
+<style lang="css">
+</style>

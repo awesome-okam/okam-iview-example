@@ -1,0 +1,15 @@
+{
+    appid: '0',
+    description: 'use iview in okam project',
+    projectname: 'okam-iview-example',
+    _ttEnv: {
+        appid: '体验appId',
+        setting: {
+            urlCheck: true,
+            es6: true,
+            postcss: true,
+            minified: true,
+            newFeature: true
+        }
+    }
+}
